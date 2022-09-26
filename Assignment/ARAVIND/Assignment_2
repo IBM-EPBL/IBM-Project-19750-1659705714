@@ -1,0 +1,35 @@
+import random
+import time
+
+def analogRead(a):
+    if(a==1):
+       return random.randrange(-25,125)
+    else:
+       return random.randrange(0,100)
+
+def alert_high_temp():
+     print("\nBUZZER ON ");
+     print("DANGER FIRE DETECTED !!! \n")
+
+def alert_high_humidity():
+     print("\nBUZZER ON ");
+     print("High Humidity !!! \n")
+
+def check_temp(temp):
+    if(temp > 80):
+        alert_high_temp()
+    else:
+        print("TEMEPERATURE = " , temp)
+
+def check_humidity(humidity):
+    if(humidity > 60):
+        alert_high_humidity()
+    else:
+        print("Humidity = " , humidity)
+
+while(1):
+    temperature = analogRead(1);
+    humidity = analogRead(2);
+    check_temp(temperature)
+    check_humidity(humidity)
+    time.sleep(1)
