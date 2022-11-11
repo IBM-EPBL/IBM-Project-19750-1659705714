@@ -1,1 +1,11 @@
+Fuctions implemented:
 
+-Configuration of Device(wokwi) through app
+
+-Display medicine and count on lcd
+
+wokwi link:
+https://wokwi.com/projects/347400182013362771
+
+
+Testing of TTS service has been done (it works but couldnot make mit app to run in background)
